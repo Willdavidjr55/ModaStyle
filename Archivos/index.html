@@ -12,10 +12,9 @@
     <header>
         <h1>ModaStyle</h1>
         <nav>
-            <a href="#">Inicio</a>
+            <a href="index.html">Inicio</a>
             <a href="#">Hombres</a>
             <a href="#">Mujeres</a>
-            <a href="#">Contacto</a>
             <a href="carrito.html">Carrinho</a>
         </nav>
     </header>
@@ -163,7 +162,6 @@ function agregarAlCarrito(nombre, precio) {
     // Guardar en localStorage
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
-    alert("Producto agregado al carrito ✔");
 }
 
 function agregarAlCarrito(nombre, precio, imagen) {
@@ -176,7 +174,6 @@ function agregarAlCarrito(nombre, precio, imagen) {
     });
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
-    alert("Producto agregado al carrito 🛒");
 }
 </script>
 
