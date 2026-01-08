@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda de Ropa | ModaStyle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>ModaStyle</h1>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Hombres</a>
+            <a href="#">Mujeres</a>
+            <a href="#">Contacto</a>
+            <a href="carrito.html">Carrinho</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h2>Nueva Colección 2026</h2>
+        <p>Moda moderna al mejor precio</p>
+    </section>
+
+    <!-- Productos -->
+    <main class="productos">
+       <div class="producto">
+    <img src="../Imagenes/Camisas/camisa.jpg" alt="Camiseta">
+    <h3>Camiseta Básica</h3>
+    <p>R$ 50</p>
+    <a href="carrito.html" ><button onclick="agregarAlCarrito(
+        'Camiseta Básica',
+        50,
+        '../Imagenes/Camisas/camisa.jpg'
+    )">
+        Agregar al carrito
+    </button></a>
+</div>
+
+       <div class="producto">
+    <img src="../Imagenes/Calças/shortsmoov.jpg" alt="Short">
+    <h3>Short MooV</h3>
+    <p>R$ 60</p>
+    <a href="carrito.html" ><button onclick="agregarAlCarrito(
+        'Short MooV',
+        60,
+        '../Imagenes/Calças/shortsmoov.jpg'
+    )">
+        Agregar al carrito
+    </button></a>
+</div>
+
+       <div class="producto">
+    <img src="../Imagenes/Camisas/camisa.jpg" alt="Camiseta">
+    <h3>Camiseta Básica</h3>
+    <p>$15</p>
+    <a href="carrito.html" ><button onclick="agregarAlCarrito(
+        'Camiseta Básica',
+        15,
+        '../Imagenes/Camisas/camisa.jpg'
+    )">
+        Agregar al carrito
+    </button></a>
+</div>
+
+       <div class="producto">
+    <img src="../Imagenes/Camisas/camisa.jpg" alt="Camiseta">
+    <h3>Camiseta Básica</h3>
+    <p>$15</p>
+    <a href="carrito.html" ><button onclick="agregarAlCarrito(
+        'Camiseta Básica',
+        15,
+        '../Imagenes/Camisas/camisa.jpg'
+    )">
+        Agregar al carrito
+    </button></a>
+</div>
+
+       <div class="producto">
+    <img src="../Imagenes/Camisas/camisa.jpg" alt="Camiseta">
+    <h3>Camiseta Básica</h3>
+    <p>$15</p>
+    <a href="carrito.html" ><button onclick="agregarAlCarrito(
+        'Camiseta Básica',
+        15,
+        '../Imagenes/Camisas/camisa.jpg'
+    )">
+        Agregar al carrito
+    </button></a>
+</div>
+
+       <div class="producto">
+    <img src="../Imagenes/Camisas/camisa.jpg" alt="Camiseta">
+    <h3>Camiseta Básica</h3>
+    <p>$15</p>
+    <a href="carrito.html" ><button onclick="agregarAlCarrito(
+        'Camiseta Básica',
+        15,
+        '../Imagenes/Camisas/camisa.jpg'
+    )">
+        Agregar al carrito
+    </button></a>
+</div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 ModaStyle | Todos los derechos reservados</p>
+    </footer>
+    <script>
+
+let carrito = onclick;
+let total = 0;
+
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre, precio });
+    total += precio;
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    const lista = document.getElementById("lista-carrito");
+    const totalSpan = document.getElementById("total");
+
+    lista.innerHTML = "";
+
+    carrito.forEach((producto, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            ${producto.nombre} - $${producto.precio}
+            <button onclick="eliminarProducto(${index})">❌</button>
+        `;
+        lista.appendChild(li);
+    });
+
+    totalSpan.textContent = total;
+}
+
+function eliminarProducto(index) {
+    total -= carrito[index].precio;
+    carrito.splice(index, 1);
+    actualizarCarrito();
+}
+
+function agregarAlCarrito(nombre, precio) {
+    // Obtener carrito actual o crear uno nuevo
+    let carrito = JSON.parse(localStorage.getItem("carrito"));
+
+    if (!carrito) {
+        carrito = [];
+    }
+
+    // Agregar producto
+    carrito.push({
+        nombre: nombre,
+        precio: precio
+    });
+
+    // Guardar en localStorage
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    alert("Producto agregado al carrito ✔");
+}
+
+function agregarAlCarrito(nombre, precio, imagen) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    carrito.push({
+        nombre: nombre,
+        precio: precio,
+        imagen: imagen
+    });
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    alert("Producto agregado al carrito 🛒");
+}
+</script>
+
+</body>
+</html>
