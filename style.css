@@ -18,36 +18,69 @@ body {
 
 /* Header */
 header {
-    background: #111;
-    color: white;
+    background: linear-gradient(#000,transparent);
+    min-height: 120px;
+    color: #eee;
     padding: 10px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
 
+header h1{
+    text-shadow: 10px 5px 10px #bbb;
+    font-size: 40px;
+}
+
 
 header nav a {
-    color: white;
-    margin-left: 15px;
+    color: #444;
+    font-size: 18px;
+    font-weight: 500;
     text-decoration: none;
+    text-shadow: 5px 5px 5px #888;
 }
 
 header nav a:hover {
-    text-decoration: underline;
+    border: 0 solid transparent;
+    border-radius: 10px;
+    padding: 5px;
+    background: #222;
+    color: #eee;
+    transition: 0.4s;
+
 }
+
 
 /* Banner */
 .banner {
+    
     background: url("https://via.placeholder.com/1200x400") center/cover;
-    color: rgb(186, 157, 157);
+    color: #111;
     text-align: center;
     padding: 80px 20px;
 }
 
 .banner h2 {
-    font-size: 40px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px #333;
+    color: #eee;
+    font-size: 35px;
+    background: #222;
+    padding: 20px 10px;
+}
+
+.banner p {
+    color: #333;
+    text-shadow: 10px 5px 10px #333;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
 }
 
 /* Productos */
@@ -64,11 +97,12 @@ header nav a:hover {
     padding: 5px;
     text-align: center;
     border-radius: 10px;
+    box-shadow: 10px 10px 10px  #aaa;
 }
 
 .producto img {
-    width: 80%;
-    border-radius: 5px;
+    width: 200px;
+    height: 200px;
 }
 
 .producto h3 {

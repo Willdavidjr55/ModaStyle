@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Ropa | ModaStyle</title>
+    <title>ModaStyle</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
 </head>
@@ -14,95 +14,97 @@
         <h1>ModaStyle</h1>
         <nav>
             <a href="index.html">Inicio</a>
-            <a href="#">Hombres</a>
-            <a href="#">Mujeres</a>
+            <a href="">Homens</a>
+            <a href="">Mulheres</a>
             <a href="carrito.html">Carrinho</a>
+            <a href="">Contato</a>
+            
         </nav>
     </header>
 
     <!-- Banner -->
     <section class="banner">
-        <h2>Nueva Colección 2026</h2>
-        <p>Moda moderna al mejor precio</p>
+        <h2>Nova Coleção 2026</h2>
+        <p>Estilo Moderno, conforto absoluto e preços que cabem no seu bolso</p>
     </section>
 
     <!-- Productos -->
     <main class="productos">
     <div class="producto">
-    <img src="camisa.jpg" alt="Camiseta" class="camisa-tamano">
-    <h3>Camiseta Básica</h3>
+    <img src="2_camisas_polo_masculinas.webp" alt="Camiseta" class="camisa-tamano">
+    <h3>Kit 2 Camisas Polo Masculinas</h3>
     <p>R$ 50</p>
     <a href="carrito.html" ><button onclick="agregarAlCarrito(
-        'Camiseta Básica',
+        'Kit 2 Camisas Polo Masculinas',
         50,
-        'camisa.jpg'
+        '2_camisas_polo_masculinas.webp'
     )">
-        Agregar al carrito
+        Adicionar ao Carrinho
     </button></a>
 </div>
 
     <div class="producto">
-    <img src="shortsmoov.jpg" alt="Short">
-    <h3>Short MooV</h3>
-    <p>R$ 60</p>
+    <img src="calça-jeans.jpg" alt="Short">
+    <h3>Calça Balão Preta</h3>
+    <p>R$$ 60</p>
     <a href="carrito.html" ><button onclick="agregarAlCarrito(
-        'Short MooV',
+        'Calça Balão Preta',
         60,
-        'shortsmoov.jpg'
+        'calça-jeans.jpg'
     )">
-        Agregar al carrito
+        Adicionar ao Carrinho
     </button></a>
 </div>
 
     <div class="producto">
-    <img src="camisa.jpg" alt="Camiseta">
+    <img src="Moletom Canguru unissex.webp" alt="Camiseta">
     <h3>Camiseta Básica</h3>
-    <p>$15</p>
+    <p>R$15</p>
     <a href="carrito.html" ><button onclick="agregarAlCarrito(
         'Camiseta Básica',
         15,
         'camisa.jpg'
     )">
-        Agregar al carrito
+        Adicionar ao Carrinho
     </button></a>
 </div>
 
     <div class="producto">
     <img src="camisa.jpg" alt="Camiseta">
     <h3>Camiseta Básica</h3>
-    <p>$15</p>
+    <p>R$15</p>
     <a href="carrito.html" ><button onclick="agregarAlCarrito(
         'Camiseta Básica',
         15,
         'camisa.jpg'
     )">
-        Agregar al carrito
+        Adicionar ao Carrinho
     </button></a>
 </div>
 
     <div class="producto">
     <img src="camisa.jpg" alt="Camiseta">
     <h3>Camiseta Básica</h3>
-    <p>$15</p>
+    <p>R$15</p>
     <a href="carrito.html" ><button onclick="agregarAlCarrito(
         'Camiseta Básica',
         15,
         '/camisa.jpg'
     )">
-        Agregar al carrito
+        Adicionar ao Carrinho
     </button></a>
 </div>
 
     <div class="producto">
     <img src="camisa.jpg" alt="Camiseta">
     <h3>Camiseta Básica</h3>
-    <p>$15</p>
+    <p>R$15</p>
     <a href="carrito.html" ><button onclick="agregarAlCarrito(
         'Camiseta Básica',
         15,
         'camisa.jpg'
     )">
-        Agregar al carrito
+        Adicionar ao Carrinho
     </button></a>
 </div>
     </main>
@@ -132,7 +134,7 @@ function actualizarCarrito() {
         const li = document.createElement("li");
         li.innerHTML = `
             ${producto.nombre} - $${producto.precio}
-            <button onclick="eliminarProducto(${index})">❌</button>
+            <button onclick="eliminarProducto(${index})"></button>
         `;
         lista.appendChild(li);
     });
