@@ -39,6 +39,7 @@ header nav a {
     color: #444;
     font-size: 18px;
     font-weight: 500;
+    gap: 10px;
     text-decoration: none;
     text-shadow: 5px 5px 5px #888;
 }
@@ -101,8 +102,8 @@ header nav a:hover {
 }
 
 .producto img {
-    width: 200px;
-    height: 200px;
+    width:  150px;
+    height: 150px;
 }
 
 .producto h3 {
